@@ -1,12 +1,12 @@
 "use client";
 
-import React from 'react';
 import { motion } from 'framer-motion';
+
 import {
-  Github, Mail, MapPin, Phone,
-  BookOpen, Facebook, Layout,
-  ArrowUpRight, MessageCircle
-} from 'lucide-react';
+  FiMail,FiMapPin,FiPhone,FiBookOpen,FiLayout,FiArrowUpRight
+} from 'react-icons/fi';
+import {SiGithub,SiFacebook,SiLine
+} from 'react-icons/si';
 
 const Portfolio = () => {
   const fadeIn = {
@@ -16,7 +16,6 @@ const Portfolio = () => {
     transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
   };
 
-  // เปลี่ยนจาก Icon Component เป็น URL รูปภาพทั้งหมด
   const skills = [
     { name: 'HTML/CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', color: 'from-[#FF0080] to-[#7928CA]' },
     { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', color: 'from-[#FAD961] to-[#F76B1C]' },
@@ -26,7 +25,7 @@ const Portfolio = () => {
     { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', color: 'from-[#00DFD8] to-[#007CF0]' },
     { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg', color: 'from-[#FF4D4D] to-[#F9CB28]' },
     { name: 'Canva', icon: 'https://www.vectorlogo.zone/logos/canva/canva-icon.svg', color: 'from-[#00C4CC] to-[#7D2AE8]' },
-    { name: 'Github', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', color: 'from-[#24292F] to-[#4B5563]' },
+    { name: 'Github', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', color: 'from-[#FFFFFF] to-[#888888]' },
     { name: 'Postman', icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg', color: 'from-[#FF6C37] to-[#FF3D00]' },
     { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', color: 'from-[#007ACC] to-[#1E90FF]' }
   ];
@@ -66,7 +65,7 @@ const Portfolio = () => {
       image: "/classboard.png",
       color: "hover:shadow-orange-200/50 hover:border-orange-200",
       github: "https://github.com/suphawidasadao/classboard.git",
-      figma: "https://www.figma.com/design/KCWMon17mlCmngXjrzEP6w/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9B%E0%B8%97%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%94%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%A5%E0%B8%99%E0%B9%8C?node-id=0-1&t=Hhy774urw2ayZemF-1"
+      figma: "https://www.figma.com/design/KCWMon17mlCmngXjrzEP6w/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=0-1&t=Hhy774urw2ayZemF-1"
     },
     {
       title: "Real-time Media Display",
@@ -75,27 +74,25 @@ const Portfolio = () => {
       image: "/realtime.png",
       color: "hover:shadow-green-200/50 hover:border-green-200",
       github: null,
-      figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1"
+      figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1"
     }
   ];
 
   const contactInfo = [
-    { icon: <Mail className="text-pink-500" size={18} />, text: "Phanmart08@gmail.com" },
-    { icon: <Phone className="text-cyan-500" size={18} />, text: "098-825-3724" },
-    { icon: <MessageCircle className="text-violet-500" size={18} />, text: "LINE ID: 0988253724" },
-    { icon: <Facebook className="text-blue-500" size={18} />, text: "Natthinan Phanmart" },
-    { icon: <MapPin className="text-orange-500" size={18} />, text: "Chiang Mai, Thailand" },
+    { icon: <FiMail className="text-pink-500" size={18} />, text: "Phanmart08@gmail.com" },
+    { icon: <FiPhone className="text-violet-500" size={18} />, text: "098-825-3724" },
+    { icon: <SiLine className="text-cyan-500" size={18} />, text: "LINE ID: 0988253724" },
+    { icon: <SiFacebook className="text-blue-500" size={18} />, text: "Natthinan Phanmart" },
+    { icon: <FiMapPin className="text-orange-500" size={18} />, text: "Chiang Mai, Thailand" },
   ];
 
   return (
     <div className="min-h-screen bg-[#0F172A] text-white font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden">
-      {/* Background Orbs */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/20 blur-[150px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-pink-600/20 blur-[150px] animate-pulse" />
       </div>
 
-      {/* Navigation */}
       <nav className="fixed w-full top-0 z-50 px-6 py-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-8 py-4 bg-slate-900/60 backdrop-blur-3xl border border-white/10 shadow-2xl rounded-3xl">
           <span className="text-2xl font-black tracking-tighter italic bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
@@ -111,8 +108,7 @@ const Portfolio = () => {
           </div>
         </div>
       </nav>
-    
-      {/* Hero Section */}
+
       <section className="relative pt-44 pb-24 px-6 z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <motion.div className="flex-[1.2] text-center md:text-left order-2 md:order-1" initial="initial" animate="whileInView" variants={fadeIn}>
@@ -133,15 +129,15 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
               <a href="mailto:Phanmart08@gmail.com" className="group bg-white text-slate-900 px-10 py-5 rounded-2xl font-black hover:bg-pink-500 hover:text-white transition-all flex items-center justify-center gap-3">
-                LET'S TALK <ArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
+                LET'S TALK <FiArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
               </a>
               <div className="flex gap-4">
-                <a href="#" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500/10 hover:border-pink-500 transition-all"><Github size={24} /></a>
-                <a href="#" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-violet-500/10 hover:border-violet-500 transition-all text-violet-400"><Facebook size={24} /></a>
+                <a href="https://github.com/natthinann" target="_blank" rel="noopener noreferrer" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500/10 hover:border-violet-500 transition-all"><SiGithub size={24} /></a>
+                <a href="#" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-violet-500/10 hover:border-blue-500 transition-all text-blue-400"><SiFacebook size={24} /></a>
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div className="flex-1 relative order-1 md:order-2" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
             <div className="relative mx-auto w-fit">
               <div className="absolute inset-0 bg-linear-to-tr from-pink-600 to-cyan-500 rounded-[4rem] blur-[60px] opacity-30 animate-pulse" />
@@ -155,12 +151,11 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-24 px-6">
         <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic leading-[1.1]">
+              <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic leading-none">
                 Software <br />
                 <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">
                   Engineering
@@ -176,9 +171,13 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
-              <BookOpen className="mb-8 opacity-50" size={50} />
-              <h3 className="text-4xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
-              <p className="text-pink-100 text-lg font-bold mb-10 italic">Information Technology and Communication</p>
+              <FiBookOpen className="mb-8 opacity-50" size={50} />
+              <h3 className="text-4xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400 whitespace-nowrap overflow-hidden">
+                University of Phayao
+              </h3>
+              <p className="text-pink-100 text-lg font-bold mb-10 italic whitespace-nowrap">
+                Information Technology and Communication
+              </p>
               <div className="pt-8 border-t border-white/20 uppercase">
                 <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
               </div>
@@ -187,29 +186,26 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Skills Section (Updated with Images) */}
       <section id="skills" className="py-24 bg-slate-900/50 backdrop-blur-sm border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <h2 className="text-5xl font-black tracking-tighter mb-2 italic uppercase">My<span className="text-pink-500">Toolkit</span></h2>
           <p className="text-cyan-400 font-bold tracking-[0.3em] uppercase text-xs">Skills & Technologies</p>
         </div>
         <div className="relative flex overflow-hidden py-4">
-          <motion.div 
-            className="flex flex-nowrap gap-8" 
-            animate={{ x: ["0%", "-50%"] }} 
-            transition={{ duration: 30, ease: "linear", repeat: Infinity }} 
-            style={{ width: "max-content" }}
-          >
+          <motion.div
+            className="flex flex-nowrap gap-8"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+            style={{ width: "max-content" }}>
             {[...skills, ...skills].map((skill, index) => (
               <div key={index} className="w-44 md:w-52 p-8 bg-slate-800/30 backdrop-blur-md rounded-[2.5rem] flex flex-col items-center justify-center gap-6 shrink-0 border border-white/5 group transition-all duration-500 hover:border-white/20">
                 <div className="relative w-16 h-16 flex items-center justify-center">
-                  {/* Glow Effect */}
                   <div className={`absolute inset-0 bg-linear-to-tr ${skill.color} blur-xl opacity-20 group-hover:opacity-50 transition-opacity duration-500`} />
-                  {/* Skill Image */}
-                  <img 
-                    src={skill.icon} 
-                    alt={skill.name} 
-                    className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-110" 
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className={`w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-110 
+                      ${skill.name === 'Github' ? 'brightness-0 invert' : ''}`} 
                   />
                 </div>
                 <span className="font-black text-white/70 tracking-[0.2em] text-[10px] uppercase group-hover:text-white transition-colors">
@@ -221,29 +217,26 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-tight text-white">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic uppercase leading-tight text-white">
             Project <br />
             <span className="inline-block pr-3 bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
               and Works
             </span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 items-start mt-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start mt-12">
             {projects.map((p, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className={`group bg-slate-900 border border-white/5 rounded-[2.5rem] transition-all duration-500 shadow-2xl relative overflow-hidden flex flex-col ${p.color}`}
-              >
+                className={`group bg-slate-900 border border-white/5 rounded-[2.5rem] transition-all duration-500 shadow-2xl relative overflow-hidden flex flex-col ${p.color}`}>
                 <div className="aspect-video w-full bg-slate-800 overflow-hidden relative border-b border-white/5">
                   <img
                     src={p.image}
                     alt={p.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  />
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"/>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 </div>
 
@@ -256,13 +249,13 @@ const Portfolio = () => {
 
                   <div className="flex gap-2 pt-6 border-t border-white/5">
                     {p.github && (
-                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10">
-                        <Github size={12} /> GITHUB
+                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white">
+                        <SiGithub size={14} /> GITHUB
                       </a>
                     )}
                     {p.figma && (
-                      <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10">
-                        <Layout size={12} /> FIGMA
+                      <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10">
+                        <FiLayout size={14} /> FIGMA
                       </a>
                     )}
                   </div>
@@ -273,14 +266,11 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 text-center text-slate-500 text-[10px] font-black tracking-[0.3em] uppercase">
-        © 2024 Natthinan Phanmart. All rights reserved.
+        © Natthinan Phanmart. Just do it.
       </footer>
 
       <style jsx global>{`
-        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .animate-spin-slow { animation: spin-slow 8s linear infinite; }
         html { scroll-behavior: smooth; }
       `}</style>
     </div>
