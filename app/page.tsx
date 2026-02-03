@@ -1,12 +1,10 @@
 "use client";
 
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-
-import {
-  FiMail,FiMapPin,FiPhone,FiBookOpen,FiLayout,FiArrowUpRight
-} from 'react-icons/fi';
-import {SiGithub,SiFacebook,SiLine
-} from 'react-icons/si';
+import { FiMail, FiMapPin, FiPhone, FiBookOpen, FiLayout, FiArrowUpRight } from 'react-icons/fi';
+import { SiGithub, SiFacebook, SiLine } from 'react-icons/si';
 
 const Portfolio = () => {
   const fadeIn = {
@@ -65,7 +63,7 @@ const Portfolio = () => {
       image: "/classboard.png",
       color: "hover:shadow-orange-200/50 hover:border-orange-200",
       github: "https://github.com/suphawidasadao/classboard.git",
-      figma: "https://www.figma.com/design/KCWMon17mlCmngXjrzEP6w/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=0-1&t=Hhy774urw2ayZemF-1"
+      figma: "https://www.figma.com/design/KCWMon17mlCmngXjrzEP6w/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=0-1&t=Hhy774urw2ayZemF-1"
     },
     {
       title: "Real-time Media Display",
@@ -75,6 +73,15 @@ const Portfolio = () => {
       color: "hover:shadow-green-200/50 hover:border-green-200",
       github: null,
       figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1"
+    },
+    {
+      title: "Cutio",
+      tech: "Figma / UI Design / Prototype",
+      desc: "Interactive dashboard prototype for real-time media monitoring.",
+      image: "/หน้าหลัก.png",
+      color: "hover:shadow-green-200/50 hover:border-green-200",
+      github: null,
+      figma: "https://www.figma.com/design/kvnjjVGZ10GMcZwycaAinV/cutio?node-id=0-1&t=WIo05oGqUsdKhoZh-1"
     }
   ];
 
@@ -88,27 +95,15 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-[#0F172A] text-white font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden">
+      <Navbar />
+
+      {/* BACKGROUND BLOBS */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/20 blur-[150px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-pink-600/20 blur-[150px] animate-pulse" />
       </div>
 
-      <nav className="fixed w-full top-0 z-50 px-6 py-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-8 py-4 bg-slate-900/60 backdrop-blur-3xl border border-white/10 shadow-2xl rounded-3xl">
-          <span className="text-2xl font-black tracking-tighter italic bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
-            PORTFOLIO.
-          </span>
-          <div className="hidden md:flex gap-10 text-[11px] font-extrabold uppercase tracking-[0.3em] text-slate-400">
-            <a href="#about" className="hover:text-pink-500 transition-colors">About</a>
-            <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-violet-400 transition-colors">Projects</a>
-          </div>
-          <div className="px-5 py-2 bg-linear-to-r from-pink-600 to-violet-600 text-white text-[10px] font-black rounded-full tracking-widest uppercase">
-            S.E. Student
-          </div>
-        </div>
-      </nav>
-
+      {/* HERO SECTION */}
       <section className="relative pt-44 pb-24 px-6 z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <motion.div className="flex-[1.2] text-center md:text-left order-2 md:order-1" initial="initial" animate="whileInView" variants={fadeIn}>
@@ -125,15 +120,15 @@ const Portfolio = () => {
               <h2 className="text-2xl md:text-3xl font-black text-cyan-400 uppercase tracking-tighter">UX/UI Design</h2>
             </div>
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              My core strengths include dedication and commitment to work, a strong sense of teamwork, and the perseverance to succeed.
+              "Hello, my name is Natthinan Phanmart. I am a 3rd-year Software Engineering student... I believe my skills and dedication will be an asset to your team. Thank you!"
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
               <a href="mailto:Phanmart08@gmail.com" className="group bg-white text-slate-900 px-10 py-5 rounded-2xl font-black hover:bg-pink-500 hover:text-white transition-all flex items-center justify-center gap-3">
                 LET'S TALK <FiArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
               </a>
               <div className="flex gap-4">
-                <a href="https://github.com/natthinann" target="_blank" rel="noopener noreferrer" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500/10 hover:border-violet-500 transition-all"><SiGithub size={24} /></a>
-                <a href="#" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-violet-500/10 hover:border-blue-500 transition-all text-blue-400"><SiFacebook size={24} /></a>
+                <a href="https://github.com/natthinann" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500/10 transition-all"><SiGithub size={24} /></a>
+                <a href="#" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-violet-500/10 transition-all text-blue-400"><SiFacebook size={24} /></a>
               </div>
             </div>
           </motion.div>
@@ -151,15 +146,14 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* ABOUT SECTION */}
       <section id="about" className="py-24 px-6">
         <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic leading-none">
                 Software <br />
-                <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">
-                  Engineering
-                </span>
+                <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">Engineering</span>
               </h2>
               <div className="flex flex-wrap gap-3 mb-10">
                 {contactInfo.map((item, idx) => (
@@ -172,12 +166,9 @@ const Portfolio = () => {
             </div>
             <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
               <FiBookOpen className="mb-8 opacity-50" size={50} />
-              <h3 className="text-4xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400 whitespace-nowrap overflow-hidden">
-                University of Phayao
-              </h3>
-              <p className="text-pink-100 text-lg font-bold mb-10 italic whitespace-nowrap">
-                Information Technology and Communication
-              </p>
+              <h3 className="text-3xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
+              <p className="text-pink-100 text-lg font-bold italic">Information Technology and Communication</p>
+              <p className="text-pink-100 text-lg font-bold mb-10 italic">Software Engineering</p>
               <div className="pt-8 border-t border-white/20 uppercase">
                 <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
               </div>
@@ -186,67 +177,56 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* SKILLS SECTION */}
       <section id="skills" className="py-24 bg-slate-900/50 backdrop-blur-sm border-y border-white/5">
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <h2 className="text-5xl font-black tracking-tighter mb-2 italic uppercase">My<span className="text-pink-500">Toolkit</span></h2>
           <p className="text-cyan-400 font-bold tracking-[0.3em] uppercase text-xs">Skills & Technologies</p>
         </div>
         <div className="relative flex overflow-hidden py-4">
-          <motion.div
-            className="flex flex-nowrap gap-8"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-            style={{ width: "max-content" }}>
+          <motion.div className="flex flex-nowrap gap-8" animate={{ x: ["0%", "-50%"] }} transition={{ duration: 30, ease: "linear", repeat: Infinity }} style={{ width: "max-content" }}>
             {[...skills, ...skills].map((skill, index) => (
               <div key={index} className="w-44 md:w-52 p-8 bg-slate-800/30 backdrop-blur-md rounded-[2.5rem] flex flex-col items-center justify-center gap-6 shrink-0 border border-white/5 group transition-all duration-500 hover:border-white/20">
                 <div className="relative w-16 h-16 flex items-center justify-center">
                   <div className={`absolute inset-0 bg-linear-to-tr ${skill.color} blur-xl opacity-20 group-hover:opacity-50 transition-opacity duration-500`} />
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className={`w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-110 
-                      ${skill.name === 'Github' ? 'brightness-0 invert' : ''}`} 
-                  />
+                  <img src={skill.icon} alt={skill.name} className={`w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-110 ${skill.name === 'Github' ? 'brightness-0 invert' : ''}`} />
                 </div>
-                <span className="font-black text-white/70 tracking-[0.2em] text-[10px] uppercase group-hover:text-white transition-colors">
-                  {skill.name}
-                </span>
+                <span className="font-black text-white/70 tracking-[0.2em] text-[10px] uppercase group-hover:text-white transition-colors">{skill.name}</span>
               </div>
             ))}
           </motion.div>
         </div>
       </section>
 
+      {/* PROJECTS SECTION - ปรับปรุงการจัดวางหัวข้อ */}
       <section id="projects" className="py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter italic uppercase leading-tight text-white">
-            Project <br />
-            <span className="inline-block pr-3 bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
-              and Works
-            </span>
-          </h2>
+          {/* Header Area: ใช้ Flex เพื่อผลักซ้าย-ขวา */}
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase leading-tight text-white">
+              Project <br />
+              <span className="inline-block pr-3 bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+                and Works
+              </span>
+            </h2>
+            <p className="text-slate-400 font-bold max-w-xs md:text-right hidden md:block uppercase text-[10px] tracking-[0.3em] mb-4">
+              Selected works that demonstrate my technical skills and design thinking.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start mt-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {projects.map((p, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10 }}
-                className={`group bg-slate-900 border border-white/5 rounded-[2.5rem] transition-all duration-500 shadow-2xl relative overflow-hidden flex flex-col ${p.color}`}>
+              <motion.div key={i} whileHover={{ y: -10 }} className={`group bg-slate-900 border border-white/5 rounded-[2.5rem] transition-all duration-500 shadow-2xl relative overflow-hidden flex flex-col ${p.color}`}>
                 <div className="aspect-video w-full bg-slate-800 overflow-hidden relative border-b border-white/5">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"/>
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 </div>
-
                 <div className="p-8 flex flex-col relative z-10">
                   <h3 className="text-xl font-black tracking-tighter uppercase text-white group-hover:text-pink-500 transition-colors mb-4">{p.title}</h3>
                   <p className="text-slate-400 mb-6 leading-relaxed font-bold text-[13px] italic">{p.desc}</p>
                   <div className="mb-8">
                     <span className="px-3 py-1 bg-white/5 rounded-full text-[9px] font-black uppercase tracking-widest text-cyan-400 border border-white/10">{p.tech}</span>
                   </div>
-
                   <div className="flex gap-2 pt-6 border-t border-white/5">
                     {p.github && (
                       <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white">
@@ -266,10 +246,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <footer className="py-12 text-center text-slate-500 text-[10px] font-black tracking-[0.3em] uppercase">
-        © Natthinan Phanmart. Just do it.
-      </footer>
-
+      <Footer />
       <style jsx global>{`
         html { scroll-behavior: smooth; }
       `}</style>
