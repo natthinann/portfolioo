@@ -3,8 +3,8 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { FiMail, FiMapPin, FiPhone, FiBookOpen, FiLayout } from 'react-icons/fi';
-import { SiGithub, SiFacebook, SiLine, SiVercel } from 'react-icons/si';
+import { FiMail, FiMapPin, FiPhone, FiBookOpen } from 'react-icons/fi';
+import { SiGithub, SiFacebook, SiLine, SiVercel, SiFigma } from 'react-icons/si';
 
 const Portfolio = () => {
   const fadeIn = {
@@ -87,13 +87,11 @@ const Portfolio = () => {
     <div className="min-h-screen bg-[#0F172A] text-white font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden">
       <Navbar />
 
-      {/* Background Glow */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/20 blur-[150px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-pink-600/20 blur-[150px] animate-pulse" />
       </div>
 
-      {/* Hero Section */}
       <section className="relative pt-44 pb-24 px-6 z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <motion.div className="flex-[1.2] text-center md:text-left order-2 md:order-1" initial="initial" animate="whileInView" variants={fadeIn}>
@@ -113,21 +111,16 @@ const Portfolio = () => {
               "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development. I am a collaborative team player, ready to learn, and eager to contribute to your team. Thank you!"
             </p>
 
-            <div className="flex gap-5 justify-center md:justify-start">
-              <a
-                href="tel:0988253724"
-                className="group p-6 bg-white text-slate-900 rounded-2xl hover:bg-emerald-500 hover:text-white transition-all shadow-xl flex items-center gap-4"
-                title="Call me">
-                <FiPhone size={24} className="group-hover:scale-110 transition-transform" />
-                <span className="font-black text-sm uppercase tracking-widest">Call Me</span>
-              </a>
-
+            <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
               <a
                 href="mailto:Phanmart08@gmail.com"
-                className="group p-6 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all flex items-center gap-4"
-                title="Email me">
-                <FiMail size={24} className="group-hover:scale-110 transition-transform" />
-                <span className="font-black text-sm uppercase tracking-widest">Email Me</span>
+                className="group bg-[#3CB043] text-white px-10 py-5 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 uppercase cursor-pointer">
+                SEND EMAIL <FiMail size={20} />
+              </a>
+              <a
+                href="tel:0988253724"
+                className="group bg-white text-black px-10 py-5 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 uppercase cursor-pointer">
+                CALL ME <FiPhone size={20} />
               </a>
             </div>
           </motion.div>
@@ -145,7 +138,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* 1. Skills Section (ขยับขึ้นมา) */}
       <section id="skills" className="py-24 bg-slate-900/50 backdrop-blur-sm border-y border-white/5 relative z-10">
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <h2 className="text-5xl font-black tracking-tighter mb-2 italic uppercase">My<span className="text-pink-500">Toolkit</span></h2>
@@ -166,7 +158,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* 2. Projects Section (ขยับขึ้นมาต่อจาก Skills) */}
       <section id="projects" className="py-32 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -201,8 +192,9 @@ const Portfolio = () => {
                       </a>
                     )}
                     {p.figma && (
-                      <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20">
-                        <FiLayout size={14} /> FIGMA
+                      <a href={p.figma} target="_blank" rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-[#F24E1E] text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20">
+                        <SiFigma size={14} /> FIGMA
                       </a>
                     )}
                     {p.vercel && (
@@ -218,7 +210,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* 3. Contact & Education Section (ย้ายมาไว้ข้างล่างสุด) */}
       <section id="contact-section" className="py-24 px-6 relative z-10">
         <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -231,7 +222,7 @@ const Portfolio = () => {
                 {contactInfo.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 p-4 bg-white/5 rounded-full border border-white/10">
                     {item.icon}
-                    <span className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-white/90">{item.text}</span>
+                    <span className="text-[10px] md:text-[11px] font-black tracking-widest text-white/90">{item.text}</span>
                   </div>
                 ))}
               </div>
