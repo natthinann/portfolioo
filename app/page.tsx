@@ -113,7 +113,6 @@ const Portfolio = () => {
             </p>
             
             <div className="flex gap-5 justify-center md:justify-start">
-              {/* ปุ่มโทร -> คลิกแล้วโทรออกทันที */}
               <a 
                 href="tel:0988253724" 
                 className="group p-6 bg-white text-slate-900 rounded-2xl hover:bg-emerald-500 hover:text-white transition-all shadow-xl flex items-center gap-4"
@@ -123,7 +122,6 @@ const Portfolio = () => {
                 <span className="font-black text-sm uppercase tracking-widest">Call Me</span>
               </a>
 
-              {/* ปุ่มเมล -> คลิกแล้วส่งอีเมล */}
               <a 
                 href="mailto:Phanmart08@gmail.com" 
                 className="group p-6 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all flex items-center gap-4"
@@ -148,7 +146,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* --- ส่วนที่เหลือ (Contact, Skills, Projects) เหมือนเดิมทั้งหมด --- */}
       <section id="contact-section" className="py-24 px-6 relative z-10">
         <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
           <div className="grid lg:grid-cols-2 gap-16">
