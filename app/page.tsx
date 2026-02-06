@@ -22,7 +22,6 @@ const Portfolio = () => {
     { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-[#007ACC] to-[#1E90FF]' },
     { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', color: 'from-[#00DFD8] to-[#007CF0]' },
     { name: 'Github', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', color: 'from-[#FFFFFF] to-[#888888]' },
-    { name: 'Postman', icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg', color: 'from-[#FF6C37] to-[#FF3D00]' },
     { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', color: 'from-[#007ACC] to-[#1E90FF]' },
     { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg', color: 'from-[#FF4D4D] to-[#F9CB28]' },
     { name: 'Canva', icon: 'https://www.vectorlogo.zone/logos/canva/canva-icon.svg', color: 'from-[#00C4CC] to-[#7D2AE8]' }
@@ -72,7 +71,7 @@ const Portfolio = () => {
       image: "/realtime.png",
       color: "hover:shadow-green-200/50 hover:border-green-200",
       figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1",
-      vercel: "https://rtmedia.vercel.app/" 
+      vercel: "https://rtmedia.vercel.app/"
     },
   ];
 
@@ -88,11 +87,13 @@ const Portfolio = () => {
     <div className="min-h-screen bg-[#0F172A] text-white font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden">
       <Navbar />
 
+      {/* Background Glow */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/20 blur-[150px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-pink-600/20 blur-[150px] animate-pulse" />
       </div>
 
+      {/* Hero Section */}
       <section className="relative pt-44 pb-24 px-6 z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <motion.div className="flex-[1.2] text-center md:text-left order-2 md:order-1" initial="initial" animate="whileInView" variants={fadeIn}>
@@ -109,24 +110,22 @@ const Portfolio = () => {
               <h2 className="text-2xl md:text-3xl font-black text-cyan-400 uppercase tracking-tighter">UX/UI Design</h2>
             </div>
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development."
+              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development. I am a collaborative team player, ready to learn, and eager to contribute to your team. Thank you!"
             </p>
-            
+
             <div className="flex gap-5 justify-center md:justify-start">
-              <a 
-                href="tel:0988253724" 
+              <a
+                href="tel:0988253724"
                 className="group p-6 bg-white text-slate-900 rounded-2xl hover:bg-emerald-500 hover:text-white transition-all shadow-xl flex items-center gap-4"
-                title="Call me"
-              >
+                title="Call me">
                 <FiPhone size={24} className="group-hover:scale-110 transition-transform" />
                 <span className="font-black text-sm uppercase tracking-widest">Call Me</span>
               </a>
 
-              <a 
-                href="mailto:Phanmart08@gmail.com" 
+              <a
+                href="mailto:Phanmart08@gmail.com"
                 className="group p-6 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all flex items-center gap-4"
-                title="Email me"
-              >
+                title="Email me">
                 <FiMail size={24} className="group-hover:scale-110 transition-transform" />
                 <span className="font-black text-sm uppercase tracking-widest">Email Me</span>
               </a>
@@ -146,36 +145,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section id="contact-section" className="py-24 px-6 relative z-10">
-        <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic leading-none">
-                Contact &<br />
-                <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">EDUCATION</span>
-              </h2>
-              <div className="flex flex-wrap gap-3 mb-10">
-                {contactInfo.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-4 bg-white/5 rounded-full border border-white/10">
-                    {item.icon}
-                    <span className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-white/90">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
-              <FiBookOpen className="mb-8 opacity-50" size={50} />
-              <h3 className="text-3xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
-              <p className="text-pink-100 text-lg font-bold italic whitespace-nowrap">Information Technology and Communication</p>
-              <p className="text-pink-100 text-lg font-bold mb-10 italic">Software Engineering</p>
-              <div className="pt-8 border-t border-white/20 uppercase">
-                <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* 1. Skills Section (ขยับขึ้นมา) */}
       <section id="skills" className="py-24 bg-slate-900/50 backdrop-blur-sm border-y border-white/5 relative z-10">
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <h2 className="text-5xl font-black tracking-tighter mb-2 italic uppercase">My<span className="text-pink-500">Toolkit</span></h2>
@@ -196,6 +166,7 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* 2. Projects Section (ขยับขึ้นมาต่อจาก Skills) */}
       <section id="projects" className="py-32 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -228,7 +199,7 @@ const Portfolio = () => {
                       <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white min-w-20">
                         <SiGithub size={14} /> GITHUB
                       </a>
-                    )} 
+                    )}
                     {p.figma && (
                       <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20">
                         <FiLayout size={14} /> FIGMA
@@ -242,7 +213,38 @@ const Portfolio = () => {
                   </div>
                 </div>
               </motion.div>
-            ))}  
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Contact & Education Section (ย้ายมาไว้ข้างล่างสุด) */}
+      <section id="contact-section" className="py-24 px-6 relative z-10">
+        <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic leading-none">
+                Contact &<br />
+                <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">EDUCATION</span>
+              </h2>
+              <div className="flex flex-wrap gap-3 mb-10">
+                {contactInfo.map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-4 bg-white/5 rounded-full border border-white/10">
+                    {item.icon}
+                    <span className="text-[10px] md:text-[11px] font-black uppercase tracking-widest text-white/90">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
+              <FiBookOpen className="mb-8 opacity-50" size={50} />
+              <h3 className="text-3xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
+              <p className="text-pink-100 text-lg font-bold italic whitespace-nowrap">Information Technology and Communication</p>
+              <p className="text-pink-100 text-lg font-bold mb-10 italic">Software Engineering</p>
+              <div className="pt-8 border-t border-white/20 uppercase">
+                <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
