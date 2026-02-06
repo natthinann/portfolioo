@@ -21,11 +21,11 @@ const Portfolio = () => {
     { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg', color: 'from-[#000000] to-[#434343]' },
     { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', color: 'from-[#007ACC] to-[#1E90FF]' },
     { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg', color: 'from-[#00DFD8] to-[#007CF0]' },
-    { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg', color: 'from-[#FF4D4D] to-[#F9CB28]' },
-    { name: 'Canva', icon: 'https://www.vectorlogo.zone/logos/canva/canva-icon.svg', color: 'from-[#00C4CC] to-[#7D2AE8]' },
     { name: 'Github', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', color: 'from-[#FFFFFF] to-[#888888]' },
     { name: 'Postman', icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg', color: 'from-[#FF6C37] to-[#FF3D00]' },
-    { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', color: 'from-[#007ACC] to-[#1E90FF]' }
+    { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', color: 'from-[#007ACC] to-[#1E90FF]' },
+    { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg', color: 'from-[#FF4D4D] to-[#F9CB28]' },
+    { name: 'Canva', icon: 'https://www.vectorlogo.zone/logos/canva/canva-icon.svg', color: 'from-[#00C4CC] to-[#7D2AE8]' }
   ];
 
   const projects = [
@@ -74,36 +74,25 @@ const Portfolio = () => {
       github: null,
       figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1"
     },
-    {
-      title: "Cutio",
-      tech: "Figma / UI Design / Prototype",
-      desc: "Interactive dashboard prototype for real-time media monitoring.",
-      image: "/หน้าหลัก.png",
-      color: "hover:shadow-green-200/50 hover:border-green-200",
-      github: null,
-      figma: "https://www.figma.com/design/kvnjjVGZ10GMcZwycaAinV/cutio?node-id=0-1&t=WIo05oGqUsdKhoZh-1"
-    }
   ];
 
   const contactInfo = [
     { icon: <FiMail className="text-pink-500" size={18} />, text: "Phanmart08@gmail.com" },
     { icon: <FiPhone className="text-violet-500" size={18} />, text: "098-825-3724" },
-    { icon: <SiLine className="text-cyan-500" size={18} />, text: "LINE ID: 0988253724" },
+    { icon: <SiLine className="text-emerald-500" size={18} />, text: "LINE ID: 0988253724" },
     { icon: <SiFacebook className="text-blue-500" size={18} />, text: "Natthinan Phanmart" },
-    { icon: <FiMapPin className="text-orange-500" size={18} />, text: "Chiang Mai, Thailand" },
+    { icon: <FiMapPin className="text-cyan-500" size={18} />, text: "Chiang Mai, Thailand" },
   ];
 
   return (
     <div className="min-h-screen bg-[#0F172A] text-white font-sans selection:bg-pink-500 selection:text-white overflow-x-hidden">
       <Navbar />
 
-      {/* BACKGROUND BLOBS */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-600/20 blur-[150px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-pink-600/20 blur-[150px] animate-pulse" />
       </div>
 
-      {/* HERO SECTION */}
       <section className="relative pt-44 pb-24 px-6 z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <motion.div className="flex-[1.2] text-center md:text-left order-2 md:order-1" initial="initial" animate="whileInView" variants={fadeIn}>
@@ -120,16 +109,29 @@ const Portfolio = () => {
               <h2 className="text-2xl md:text-3xl font-black text-cyan-400 uppercase tracking-tighter">UX/UI Design</h2>
             </div>
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              "Hello, my name is Natthinan Phanmart. I am a 3rd-year Software Engineering student... I believe my skills and dedication will be an asset to your team. Thank you!"
+              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development."
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
-              <a href="mailto:Phanmart08@gmail.com" className="group bg-white text-slate-900 px-10 py-5 rounded-2xl font-black hover:bg-pink-500 hover:text-white transition-all flex items-center justify-center gap-3">
-                LET'S TALK <FiArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
+            
+            <div className="flex gap-5 justify-center md:justify-start">
+              {/* ปุ่มโทร -> คลิกแล้วโทรออกทันที */}
+              <a 
+                href="tel:0988253724" 
+                className="group p-6 bg-white text-slate-900 rounded-2xl hover:bg-emerald-500 hover:text-white transition-all shadow-xl flex items-center gap-4"
+                title="Call me"
+              >
+                <FiPhone size={24} className="group-hover:scale-110 transition-transform" />
+                <span className="font-black text-sm uppercase tracking-widest">Call Me</span>
               </a>
-              <div className="flex gap-4">
-                <a href="https://github.com/natthinann" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500/10 transition-all"><SiGithub size={24} /></a>
-                <a href="#" className="p-5 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-violet-500/10 transition-all text-blue-400"><SiFacebook size={24} /></a>
-              </div>
+
+              {/* ปุ่มเมล -> คลิกแล้วส่งอีเมล */}
+              <a 
+                href="mailto:Phanmart08@gmail.com" 
+                className="group p-6 bg-slate-800/50 border border-white/10 rounded-2xl hover:bg-pink-500 hover:text-white hover:border-pink-500 transition-all flex items-center gap-4"
+                title="Email me"
+              >
+                <FiMail size={24} className="group-hover:scale-110 transition-transform" />
+                <span className="font-black text-sm uppercase tracking-widest">Email Me</span>
+              </a>
             </div>
           </motion.div>
 
@@ -138,7 +140,7 @@ const Portfolio = () => {
               <div className="absolute inset-0 bg-linear-to-tr from-pink-600 to-cyan-500 rounded-[4rem] blur-[60px] opacity-30 animate-pulse" />
               <div className="relative z-10 w-64 md:w-80 aspect-4/5 bg-linear-to-tr from-pink-500 to-violet-600 p-1 rounded-[3.8rem] overflow-hidden">
                 <div className="w-full h-full overflow-hidden rounded-[3.5rem] bg-slate-900">
-                  <img src="/นักศึกษา.jpg" alt="Profile" className="w-full h-full object-cover object-top" />
+                  <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover object-top" />
                 </div>
               </div>
             </div>
@@ -146,14 +148,14 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section id="about" className="py-24 px-6">
+      {/* --- ส่วนที่เหลือ (Contact, Skills, Projects) เหมือนเดิมทั้งหมด --- */}
+      <section id="contact-section" className="py-24 px-6 relative z-10">
         <div className="max-w-6xl mx-auto bg-slate-900/40 rounded-[4rem] p-8 md:p-20 border border-white/5 backdrop-blur-md">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic leading-none">
-                Software <br />
-                <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">Engineering</span>
+                Contact &<br />
+                <span className="inline-block pr-6 pb-2 bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">EDUCATION</span>
               </h2>
               <div className="flex flex-wrap gap-3 mb-10">
                 {contactInfo.map((item, idx) => (
@@ -167,7 +169,7 @@ const Portfolio = () => {
             <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
               <FiBookOpen className="mb-8 opacity-50" size={50} />
               <h3 className="text-3xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
-              <p className="text-pink-100 text-lg font-bold italic">Information Technology and Communication</p>
+              <p className="text-pink-100 text-lg font-bold italic whitespace-nowrap">Information Technology and Communication</p>
               <p className="text-pink-100 text-lg font-bold mb-10 italic">Software Engineering</p>
               <div className="pt-8 border-t border-white/20 uppercase">
                 <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
@@ -177,8 +179,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* SKILLS SECTION */}
-      <section id="skills" className="py-24 bg-slate-900/50 backdrop-blur-sm border-y border-white/5">
+      <section id="skills" className="py-24 bg-slate-900/50 backdrop-blur-sm border-y border-white/5 relative z-10">
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <h2 className="text-5xl font-black tracking-tighter mb-2 italic uppercase">My<span className="text-pink-500">Toolkit</span></h2>
           <p className="text-cyan-400 font-bold tracking-[0.3em] uppercase text-xs">Skills & Technologies</p>
@@ -198,10 +199,8 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* PROJECTS SECTION - ปรับปรุงการจัดวางหัวข้อ */}
-      <section id="projects" className="py-32 px-6">
+      <section id="projects" className="py-32 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Header Area: ใช้ Flex เพื่อผลักซ้าย-ขวา */}
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase leading-tight text-white">
               Project <br />
@@ -232,7 +231,7 @@ const Portfolio = () => {
                       <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white">
                         <SiGithub size={14} /> GITHUB
                       </a>
-                    )}
+                    )} 
                     {p.figma && (
                       <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10">
                         <FiLayout size={14} /> FIGMA
@@ -241,7 +240,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))}  
           </div>
         </div>
       </section>
