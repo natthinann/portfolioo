@@ -3,8 +3,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { FiMail, FiMapPin, FiPhone, FiBookOpen, FiLayout, FiArrowUpRight } from 'react-icons/fi';
-// เพิ่ม SiVercel เข้ามาในบรรทัดนี้
+import { FiMail, FiMapPin, FiPhone, FiBookOpen, FiLayout } from 'react-icons/fi';
 import { SiGithub, SiFacebook, SiLine, SiVercel } from 'react-icons/si';
 
 const Portfolio = () => {
@@ -224,7 +223,6 @@ const Portfolio = () => {
                   <div className="mb-8">
                     <span className="px-3 py-1 bg-white/5 rounded-full text-[9px] font-black uppercase tracking-widest text-cyan-400 border border-white/10">{p.tech}</span>
                   </div>
-                  {/* ปรับปรุงส่วนปุ่มให้รองรับ 3 ปุ่ม */}
                   <div className="flex gap-2 pt-6 border-t border-white/5 flex-wrap">
                     {p.github && (
                       <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white min-w-20">
@@ -236,10 +234,9 @@ const Portfolio = () => {
                         <FiLayout size={14} /> FIGMA
                       </a>
                     )}
-                    {/* เพิ่มปุ่ม Vercel (Live Demo) */}
                     {p.vercel && (
                       <a href={p.vercel} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-black text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20">
-                        <SiVercel size={12} /> LIVE
+                        <SiVercel size={12} /> VERCEL
                       </a>
                     )}
                   </div>
