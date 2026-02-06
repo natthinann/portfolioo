@@ -138,7 +138,7 @@ const Portfolio = () => {
               <div className="absolute inset-0 bg-linear-to-tr from-pink-600 to-cyan-500 rounded-[4rem] blur-[60px] opacity-30 animate-pulse" />
               <div className="relative z-10 w-64 md:w-80 aspect-4/5 bg-linear-to-tr from-pink-500 to-violet-600 p-1 rounded-[3.8rem] overflow-hidden">
                 <div className="w-full h-full overflow-hidden rounded-[3.5rem] bg-slate-900">
-                  <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover object-top" />
+                  <img src="/profile.JPG" alt="Profile" className="w-full h-full object-cover object-top" />
                 </div>
               </div>
             </div>
