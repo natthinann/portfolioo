@@ -4,7 +4,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { FiMail, FiMapPin, FiPhone, FiBookOpen, FiLayout, FiArrowUpRight } from 'react-icons/fi';
-import { SiGithub, SiFacebook, SiLine } from 'react-icons/si';
+// เพิ่ม SiVercel เข้ามาในบรรทัดนี้
+import { SiGithub, SiFacebook, SiLine, SiVercel } from 'react-icons/si';
 
 const Portfolio = () => {
   const fadeIn = {
@@ -67,12 +68,13 @@ const Portfolio = () => {
     },
     {
       title: "Real-time Media Display",
-      tech: "Figma / UI Design / Prototype",
-      desc: "Interactive dashboard prototype for real-time media monitoring.",
+      tech: "Next.js / Tailwind / Vercel",
+      desc: "Interactive dashboard for real-time media monitoring and display management.",
       image: "/realtime.png",
       color: "hover:shadow-green-200/50 hover:border-green-200",
-      github: null,
-      figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1"
+      github: "https://github.com/suphawidasadao/classboard.git",
+      figma: "https://www.figma.com/design/03plrOVueunrmc1Zy0fzBH/%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%A5%E0%B9%84%E0%B8%97%E0%B8%A1%E0%B9%8C?node-id=41-285&t=MXILv2ZA6RpIBSPx-1",
+      vercel: "https://rtmedia.vercel.app/" // เพิ่ม URL ตรงนี้
     },
   ];
 
@@ -223,15 +225,22 @@ const Portfolio = () => {
                   <div className="mb-8">
                     <span className="px-3 py-1 bg-white/5 rounded-full text-[9px] font-black uppercase tracking-widest text-cyan-400 border border-white/10">{p.tech}</span>
                   </div>
-                  <div className="flex gap-2 pt-6 border-t border-white/5">
+                  {/* ปรับปรุงส่วนปุ่มให้รองรับ 3 ปุ่ม */}
+                  <div className="flex gap-2 pt-6 border-t border-white/5 flex-wrap">
                     {p.github && (
-                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white">
+                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white min-w-[80px]">
                         <SiGithub size={14} /> GITHUB
                       </a>
                     )} 
                     {p.figma && (
-                      <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10">
+                      <a href={p.figma} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-pink-600 text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-[80px]">
                         <FiLayout size={14} /> FIGMA
+                      </a>
+                    )}
+                    {/* เพิ่มปุ่ม Vercel (Live Demo) */}
+                    {p.vercel && (
+                      <a href={p.vercel} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-black text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-[80px]">
+                        <SiVercel size={12} /> LIVE
                       </a>
                     )}
                   </div>
