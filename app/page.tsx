@@ -99,7 +99,7 @@ const Portfolio = () => {
               <span className="inline-block w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
               OPEN FOR OPPORTUNITIES
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.85] mb-8">
               <span className="text-white">Natthinan</span> <br />
               <span className="bg-linear-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">Phanmart</span>
@@ -111,7 +111,7 @@ const Portfolio = () => {
             </div>
 
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development."
+              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development. I am a collaborative team player, ready to learn, and eager to contribute to your team. Thank you!"
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
