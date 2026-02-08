@@ -111,16 +111,19 @@ const Portfolio = () => {
               "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development. I am a collaborative team player, ready to learn, and eager to contribute to your team. Thank you!"
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
               <a
                 href="mailto:Phanmart08@gmail.com"
-                className="group bg-[#3CB043] text-white px-10 py-5 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 uppercase cursor-pointer">
-                SEND EMAIL <FiMail size={20} />
+                className="relative group overflow-hidden bg-linear-to-r from-[#3CB043] to-[#2e8b33] text-white px-10 py-5 rounded-xl font-bold tracking-wider hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#3CB043]/40 flex items-center justify-center gap-3 uppercase">
+                <span className="relative z-10">Send Email</span>
+                <FiMail size={22} className="group-hover:rotate-12 transition-transform" />
               </a>
+
               <a
                 href="tel:0988253724"
-                className="group bg-white text-black px-10 py-5 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 uppercase cursor-pointer">
-                CALL ME <FiPhone size={20} />
+                className="group bg-white text-black px-10 py-5 rounded-xl border-2 border-slate-200 font-bold tracking-wider hover:bg-slate-50 transition-all duration-300 shadow-sm flex items-center justify-center gap-3 uppercase">
+                <span>Call Me</span>
+                <FiPhone size={20} className="group-hover:animate-bounce" />
               </a>
             </div>
           </motion.div>
