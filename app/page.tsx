@@ -66,7 +66,7 @@ const Portfolio = () => {
     },
     {
       title: "Real-time Media Display",
-      tech: "Next.js / Tailwind / Vercel",
+      tech: "Figma / Next.js / Vercel",
       desc: "Interactive dashboard for real-time media monitoring and display management.",
       image: "/realtime.png",
       color: "hover:shadow-green-200/50 hover:border-green-200",
