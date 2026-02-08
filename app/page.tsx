@@ -99,31 +99,37 @@ const Portfolio = () => {
               <span className="inline-block w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
               OPEN FOR OPPORTUNITIES
             </div>
+            
             <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.85] mb-8">
               <span className="text-white">Natthinan</span> <br />
               <span className="bg-linear-to-r from-pink-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">Phanmart</span>
             </h1>
+
             <div className="flex items-center justify-center md:justify-start gap-4 mb-10">
               <div className="h-2 w-16 bg-linear-to-r from-pink-500 to-violet-500 rounded-full" />
               <h2 className="text-2xl md:text-3xl font-black text-cyan-400 uppercase tracking-tighter">UX/UI Design</h2>
             </div>
+
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development. I am a collaborative team player, ready to learn, and eager to contribute to your team. Thank you!"
+              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
               <a
                 href="mailto:Phanmart08@gmail.com"
-                className="relative group overflow-hidden bg-linear-to-r from-[#3CB043] to-[#2e8b33] text-white px-10 py-5 rounded-xl font-bold tracking-wider hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#3CB043]/40 flex items-center justify-center gap-3 uppercase">
-                <span className="relative z-10">Send Email</span>
-                <FiMail size={22} className="group-hover:rotate-12 transition-transform" />
+                className="group relative px-10 py-5 flex items-center justify-center gap-3 overflow-hidden rounded-4xl font-black tracking-[0.15em] uppercase transition-all duration-500 hover:scale-105 active:scale-95 shadow-lg shadow-pink-500/20">
+                <div className="absolute inset-0 bg-linear-to-r from-pink-500 via-violet-600 to-indigo-600 transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-pink-500/50" />
+                <span className="relative z-10 text-white">Send Email</span>
+                <FiMail size={22} className="relative z-10 text-white group-hover:rotate-12 transition-transform duration-300" />
               </a>
 
               <a
                 href="tel:0988253724"
-                className="group bg-white text-black px-10 py-5 rounded-xl border-2 border-slate-200 font-bold tracking-wider hover:bg-slate-50 transition-all duration-300 shadow-sm flex items-center justify-center gap-3 uppercase">
-                <span>Call Me</span>
-                <FiPhone size={20} className="group-hover:animate-bounce" />
+                className="group relative px-10 py-5 flex items-center justify-center gap-3 overflow-hidden rounded-4xl font-black tracking-[0.15em] uppercase border-2 border-cyan-400/50 transition-all duration-500 hover:bg-cyan-400/10 hover:border-cyan-400 shadow-lg">
+                <span className="text-cyan-400 transition-colors duration-300">Call Me</span>
+                <FiPhone size={20} className="text-cyan-400 group-hover:animate-bounce transition-transform" />
+                <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-5 transition-opacity" />
               </a>
             </div>
           </motion.div>
@@ -170,9 +176,6 @@ const Portfolio = () => {
                 and Works
               </span>
             </h2>
-            <p className="text-slate-400 font-bold max-w-xs md:text-right hidden md:block uppercase text-[10px] tracking-[0.3em] mb-4">
-              Selected works that demonstrate my technical skills and design thinking.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
@@ -180,7 +183,6 @@ const Portfolio = () => {
               <motion.div key={i} whileHover={{ y: -10 }} className={`group bg-slate-900 border border-white/5 rounded-[2.5rem] transition-all duration-500 shadow-2xl relative overflow-hidden flex flex-col ${p.color}`}>
                 <div className="aspect-video w-full bg-slate-800 overflow-hidden relative border-b border-white/5">
                   <img src={p.image} alt={p.title} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                 </div>
                 <div className="p-8 flex flex-col relative z-10">
                   <h3 className="text-xl font-black tracking-tighter uppercase text-white group-hover:text-pink-500 transition-colors mb-4">{p.title}</h3>
@@ -189,22 +191,8 @@ const Portfolio = () => {
                     <span className="px-3 py-1 bg-white/5 rounded-full text-[9px] font-black uppercase tracking-widest text-cyan-400 border border-white/10">{p.tech}</span>
                   </div>
                   <div className="flex gap-2 pt-6 border-t border-white/5 flex-wrap">
-                    {p.github && (
-                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white min-w-20">
-                        <SiGithub size={14} /> GITHUB
-                      </a>
-                    )}
-                    {p.figma && (
-                      <a href={p.figma} target="_blank" rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-[#F24E1E] text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20">
-                        <SiFigma size={14} /> FIGMA
-                      </a>
-                    )}
-                    {p.vercel && (
-                      <a href={p.vercel} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-black text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20">
-                        <SiVercel size={12} /> VERCEL
-                      </a>
-                    )}
+                    {p.github && <a href={p.github} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black min-w-20"><SiGithub size={14} /> GITHUB</a>}
+                    {p.figma && <a href={p.figma} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-[#F24E1E] text-white rounded-xl transition-all text-[9px] font-black min-w-20"><SiFigma size={14} /> FIGMA</a>}
                   </div>
                 </div>
               </motion.div>
@@ -233,9 +221,8 @@ const Portfolio = () => {
             <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
               <FiBookOpen className="mb-8 opacity-50" size={50} />
               <h3 className="text-3xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
-              <p className="text-pink-100 text-lg font-bold italic whitespace-nowrap">Information Technology and Communication</p>
-              <p className="text-pink-100 text-lg font-bold mb-10 italic">Software Engineering</p>
-              <div className="pt-8 border-t border-white/20 uppercase">
+              <p className="text-pink-100 text-lg font-bold italic">Software Engineering</p>
+              <div className="pt-8 border-t border-white/20 uppercase mt-10">
                 <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
               </div>
             </div>
