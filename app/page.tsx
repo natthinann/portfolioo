@@ -191,8 +191,9 @@ const Portfolio = () => {
                     <span className="px-3 py-1 bg-white/5 rounded-full text-[9px] font-black uppercase tracking-widest text-cyan-400 border border-white/10">{p.tech}</span>
                   </div>
                   <div className="flex gap-2 pt-6 border-t border-white/5 flex-wrap">
-                    {p.github && <a href={p.github} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black min-w-20"><SiGithub size={14} /> GITHUB</a>}
-                    {p.figma && <a href={p.figma} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-[#F24E1E] text-white rounded-xl transition-all text-[9px] font-black min-w-20"><SiFigma size={14} /> FIGMA</a>}
+                    {p.github && <a href={p.github} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white hover:text-slate-900 rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 text-white min-w-20"><SiGithub size={14} /> GITHUB</a>}
+                    {p.figma && <a href={p.figma} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-[#F24E1E] text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20"><SiFigma size={14} /> FIGMA</a>}
+                    {p.vercel && <a href={p.vercel} target="_blank" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-black text-white rounded-xl transition-all text-[9px] font-black tracking-widest border border-white/10 min-w-20"><SiVercel size={12} /> VERCEL</a>}
                   </div>
                 </div>
               </motion.div>
