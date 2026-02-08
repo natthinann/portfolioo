@@ -111,7 +111,7 @@ const Portfolio = () => {
             </div>
 
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              "Hello, my name is Natthinan Phanmart, a 3rd-year Software Engineering student. I am seeking an opportunity as a UX/UI Designer. I am passionate about user-centric design and, with my technical background, I can effectively bridge design and development. I am a collaborative team player, ready to learn, and eager to contribute to your team. Thank you!"
+              "Hello, my name is Natthinan Phanmart. I am currently a third-year Software Engineering student (rising senior) at the Faculty of Information and Communication Technology. I am seeking a UX/UI Designer internship. With my technical background, I can effectively bridge the gap between design and development. I am a collaborative team player, eager to learn, and ready to contribute to your team. Thank you!"
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
@@ -222,8 +222,8 @@ const Portfolio = () => {
             <div className="bg-linear-to-br from-pink-600 to-indigo-800 p-10 md:p-12 rounded-[4rem] text-white shadow-2xl">
               <FiBookOpen className="mb-8 opacity-50" size={50} />
               <h3 className="text-3xl font-black mb-3 uppercase tracking-tighter underline decoration-cyan-400">University of Phayao</h3>
-              <p className="text-pink-100 text-lg font-bold italic"> Faculty of Information and Communication Technology</p> <br/>
-              <p className="text-pink-100 text-lg font-bold italic">Software Engineering</p> 
+              <p className="text-pink-100 text-lg font-bold italic"> Faculty of Information and Communication Technology</p> <br />
+              <p className="text-pink-100 text-lg font-bold italic">Software Engineering</p>
               <div className="pt-8 border-t border-white/20 uppercase mt-10">
                 <p className="text-3xl font-black italic">2023 <span className="text-cyan-400">—</span> NOW</p>
               </div>
