@@ -111,7 +111,7 @@ const Portfolio = () => {
             </div>
 
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-            "Hello, my name is Natthinan Phanmart, a 4th-year Software Engineering student. I am seeking an opportunity in Technology & Software Development. I am passionate about creating efficient solutions and, with my background in software engineering, I can effectively bridge the gap between complex technical requirements and functional, high-quality development."
+            "Hello, my name is Natthinan Phanmart, a rising 4th-year Software Engineering student. I am seeking an opportunity in Technology & Software Development. With my strong technical foundation, I am passionate about developing efficient solutions and can effectively bridge the gap between complex requirements and high-quality software."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
