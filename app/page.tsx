@@ -107,11 +107,11 @@ const Portfolio = () => {
 
             <div className="flex items-center justify-center md:justify-start gap-4 mb-10">
               <div className="h-2 w-16 bg-linear-to-r from-pink-500 to-violet-500 rounded-full" />
-              <h2 className="text-2xl md:text-3xl font-black text-cyan-400 uppercase tracking-tighter">UX/UI Design</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-cyan-400 uppercase tracking-tighter">Technology & Software Development</h2>
             </div>
 
             <p className="text-lg text-slate-400 max-w-lg mb-12 leading-relaxed font-medium mx-auto md:mx-0">
-              "Hello, my name is Natthinan Phanmart. I am currently a third-year Software Engineering student (rising senior) at the Faculty of Information and Communication Technology. I am seeking a UX/UI Designer internship. With my technical background, I can effectively bridge the gap between design and development. I am a collaborative team player, eager to learn, and ready to contribute to your team. Thank you!"
+            "Hello, my name is Natthinan Phanmart, a 4th-year Software Engineering student. I am seeking an opportunity in Technology & Software Development. I am passionate about creating efficient solutions and, with my background in software engineering, I can effectively bridge the gap between complex technical requirements and functional, high-quality development."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
